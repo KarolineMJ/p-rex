@@ -63,12 +63,23 @@ button:active {
 	display: none;
 }
 
-.prexHelmet{
+.prexhelmet{
 	background-image: url(img/front-hat.png);
-	z-index: 2;
+	z-index: 3;
 	position: relative;
 	height: 155px;
 	width: 127px;
+	margin-left: 492px;
+	margin-top: -500px;
+	display: none;
+}
+
+.flying{
+	background-image: url(img/flying.png);
+	z-index: 4;
+	position: relative;
+	height: 155px;
+	width: 173px;
 	margin-left: 492px;
 	margin-top: -500px;
 	display: none;
