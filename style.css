@@ -27,6 +27,7 @@ button:active {
 
 .mainframe{
 	display:none;
+	position: absolute;
 }
 
 .startButton img{
@@ -37,8 +38,28 @@ button:active {
 	display:none;
 }
 
-.mainframeRemoveDisplay{
-	display: block;
+.prex{
+	background-image: url(img/walking-cycle4.png);
+	width: 206px;
+	height: 195px;
+	position: relative;
+	z-index: 1;
+	transform: translateX(-300px);
+	margin-top: -500px;
 }
 
+.prexCSS{
+	animation: walk 2.5s steps(8) forwards;
+}
 
+@keyframes walk{
+	from{background-position: 0px;}
+	to{background-position: -1648px;}
+	0%{
+
+	}
+	100%{
+		transform: translateX(450px);
+	}
+
+}

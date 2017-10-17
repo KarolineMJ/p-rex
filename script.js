@@ -1,6 +1,7 @@
 let startButton = document.querySelector(".startButton");
 let mainFrame = document.querySelector(".mainframe");
 let wind = document.querySelector("#wind");
+let prex = document.querySelector(".prex");
 
 
 startButton.addEventListener('click', function(happening){
@@ -16,7 +17,7 @@ startButton.addEventListener('click', function(happening){
     	console.log("hurray");
     	mainFrame.classList.remove("mainframe");
     	wind.play();
-
+    	prex.classList.add("prexCSS");
     }
 
 }, true);
