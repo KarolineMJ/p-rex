@@ -83,6 +83,7 @@ button:active {
 	margin-left: 492px;
 	margin-top: -500px;
 	display: none;
+	animation: flying 2s forwards;
 }
 
 @keyframes walk{
@@ -95,4 +96,10 @@ button:active {
 		transform: translateX(450px);
 	}
 
+}
+
+@keyframes flying{
+	100%{
+		transform: translateX(150px);
+	}
 }
