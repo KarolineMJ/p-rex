@@ -1,6 +1,6 @@
-let startButton = document.querySelector("#startButton");
-let startButtonBackground = document.querySelector("#startButton")
-let titlePicture = document.querySelector("title");
+let startButton = document.querySelector(".startButton");
+let mainFrame = document.querySelector(".mainframe");
+
 
 startButton.addEventListener('click', function(happening){
     console.log("something is happening");
@@ -10,6 +10,10 @@ startButton.addEventListener('click', function(happening){
         if(audios[i] != happening.target){
             audios[i].pause();
         }
+    }
+    if(startButton.classList.contains("mainCSS")){
+    	console.log("hurray");
+    	mainFrame.classList.remove("mainframe");
     }
 
 }, true);
