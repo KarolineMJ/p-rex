@@ -1,5 +1,6 @@
 let startButton = document.querySelector(".startButton");
 let mainFrame = document.querySelector(".mainframe");
+let wind = document.querySelector("#wind");
 
 
 startButton.addEventListener('click', function(happening){
@@ -14,6 +15,8 @@ startButton.addEventListener('click', function(happening){
     if(startButton.classList.contains("mainCSS")){
     	console.log("hurray");
     	mainFrame.classList.remove("mainframe");
+    	wind.play();
+
     }
 
 }, true);
