@@ -39,12 +39,12 @@ button:active {
 }
 
 .prex{
-	background-image: url(img/walking-cycle4.png);
-	width: 206px;
-	height: 195px;
+	background-image: url(img/walking-cycle5.png);
+	width: 175px;
+	height: 166px;
 	position: relative;
 	z-index: 1;
-	transform: translateX(-300px);
+	transform: translateX(-200px);
 	margin-top: -500px;
 }
 
@@ -52,9 +52,31 @@ button:active {
 	animation: walk 2.5s steps(8) forwards;
 }
 
+.prexFront{
+	background-image: url(img/front.png);
+	z-index: 2;
+	position: relative;
+	height: 155px;
+	width: 127px;
+	margin-left: 492px;
+	margin-top: -500px;
+	display: none;
+}
+
+.prexHelmet{
+	background-image: url(img/front-hat.png);
+	z-index: 2;
+	position: relative;
+	height: 155px;
+	width: 127px;
+	margin-left: 492px;
+	margin-top: -500px;
+	display: none;
+}
+
 @keyframes walk{
 	from{background-position: 0px;}
-	to{background-position: -1648px;}
+	to{background-position: -1400px;}
 	0%{
 
 	}
