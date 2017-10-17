@@ -7,6 +7,7 @@ let snowSound = document.querySelector("#snow");
 let prexFront = document.querySelector(".prexFront");
 let helmet = document.querySelector(".prexhelmet");
 let flying = document.querySelector(".flying");
+let ballon = document.querySelector(".ballons");
 
 startButton.addEventListener('click', function(happening){
     console.log("something is happening");
@@ -59,6 +60,17 @@ function flyBaby(){
 	}
 }
 
+flying.addEventListener('click', safePrex);
+
+function safePrex(){
+	clickCounter = clickCounter + 1;
+
+	if (clickCounter == 3){
+		console.log("Safe that little penguin");
+		flying.style.display = "none";
+		ballon.style.display = "block";
+	}
+}
 
 
 /*('click', startAnimation);

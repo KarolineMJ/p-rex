@@ -86,6 +86,17 @@ button:active {
 	animation: flying 2s forwards;
 }
 
+.ballons{
+	background-image: url(img/balloons.png);
+	z-index: 5;
+	position: relative;
+	height: 414px;
+	width: 194px;
+	margin-left: 610px;
+	margin-top: -500px;
+	display: none;
+}
+
 @keyframes walk{
 	from{background-position: 0px;}
 	to{background-position: -1400px;}
