@@ -1,0 +1,7 @@
+let startButton = document.querySelector("#startButton");
+startButton.addEventListener('click', startAnimation);
+
+function starting(){
+	console.log("something is happening"),
+
+}
