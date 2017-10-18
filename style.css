@@ -38,6 +38,15 @@ button:active {
 	display:none;
 }
 
+
+.credit{
+	display: none;
+}
+
+.credit img{
+	position: absolute;
+}
+
 .prex{
 	background-image: url(img/walking-cycle5.png);
 	width: 175px;
@@ -61,6 +70,7 @@ button:active {
 	margin-left: 492px;
 	margin-top: -500px;
 	display: none;
+	animation: shake 3s 5s ease;
 }
 
 .prexhelmet{
@@ -95,7 +105,7 @@ button:active {
 	margin-left: 610px;
 	margin-top: -800px;
 	display: none;
-	animation: falling 2s forwards;
+	animation: falling 1s forwards;
 }
 
 @keyframes walk{
@@ -119,5 +129,14 @@ button:active {
 @keyframes falling{
 	100%{
 		transform: translateY(380px);
+	}
+}
+
+@keyframes shake{
+	2%{transform: rotate(10deg);
+	}
+	4%{transform: rotate(-10deg);}
+	100%{transform: rotate(0deg);
+
 	}
 }

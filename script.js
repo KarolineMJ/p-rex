@@ -9,6 +9,9 @@ let helmet = document.querySelector(".prexhelmet");
 let flying = document.querySelector(".flying");
 let ballon = document.querySelector(".ballons");
 let credit = document.querySelector(".credit");
+let introSong = document.querySelector("#intro");
+
+introSong.volume = 0.5;
 
 startButton.addEventListener('click', function(happening){
     console.log("something is happening");
@@ -83,14 +86,9 @@ function creditGoesTo(){
 		console.log("and the credit goes to.....");
 		ballon.style.display = "none";
 		mainFrame.style.display = "none";
-
-	let audios = document.getElementsByTagName('audio');
-    for(let i = 0, len = audios.length; i < len;i++){
-        if(audios[i] != creditGoesTo.target){
-            audios[i].pause();
-        }
-
-	}
+		credit.style.display = "block";
+		introSong.play();
+		wind.pause();
 }
 }
 
