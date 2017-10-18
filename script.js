@@ -8,6 +8,7 @@ let prexFront = document.querySelector(".prexFront");
 let helmet = document.querySelector(".prexhelmet");
 let flying = document.querySelector(".flying");
 let ballon = document.querySelector(".ballons");
+let credit = document.querySelector(".credit");
 
 startButton.addEventListener('click', function(happening){
     console.log("something is happening");
@@ -21,6 +22,7 @@ startButton.addEventListener('click', function(happening){
     if(startButton.classList.contains("mainCSS")){
     	console.log("hurray p-rex is moving");
     	mainFrame.classList.remove("mainframe");
+    	wind.play();
     	snow.play();
     	prex.classList.add("prexCSS");
     	snow.addEventListener('ended', animationEnded);
@@ -72,6 +74,25 @@ function safePrex(){
 	}
 }
 
+ballon.addEventListener('click', creditGoesTo);
+
+function creditGoesTo(){
+	clickCounter = clickCounter + 1;
+
+	if(clickCounter == 4){
+		console.log("and the credit goes to.....");
+		ballon.style.display = "none";
+		mainFrame.style.display = "none";
+
+	let audios = document.getElementsByTagName('audio');
+    for(let i = 0, len = audios.length; i < len;i++){
+        if(audios[i] != creditGoesTo.target){
+            audios[i].pause();
+        }
+
+	}
+}
+}
 
 /*('click', startAnimation);
 
