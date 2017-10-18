@@ -16,6 +16,7 @@ let bullyTwo = document.querySelector(".bully2");
 let jump = document.querySelector("#jump")
 let falling = document.querySelector("#fall");
 let safe = document.querySelector(".safeButton");
+let clickText = document.querySelector(".clickText");
 
 introSong.volume = 0.5;
 wind.volume = 0.2;
@@ -52,6 +53,7 @@ startButton.addEventListener('click', function(happening){
 		prex.style.display = "none";
 		prexFront.style.display = "block";
 		heartbeat.play();
+		clickText.style.display = "block";
 
 	}
 
@@ -64,6 +66,7 @@ function giveOnHelmet(){
 		console.log("GIVE HIM A HELMET GOT DAMMIT!");
 		prexFront.style.display = "none";
 		helmet.style.display = "block";
+		clickText.style.display = "none";
 
 	}
 }
@@ -102,7 +105,7 @@ function safePrex(){
 	}
 }
 
-ballon.addEventListener('click', creditGoesTo);
+ballon.addEventListener('animationend', creditGoesTo);
 
 function creditGoesTo(){
 	clickCounter = clickCounter + 1;
