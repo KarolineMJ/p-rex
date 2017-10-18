@@ -1,3 +1,4 @@
+html { overflow-y: hidden; }
 button {
   display: inline-block;
   padding: 15px 25px;
@@ -24,6 +25,11 @@ button:active {
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
+h1{
+	position: absolute;
+	font-family: 'Amatic SC', cursive;
+	display: none;
+}
 
 .mainframe{
 	display:none;
@@ -37,6 +43,11 @@ button:active {
 .mainCSS{
 	display:none;
 }
+.safeButton{
+	display:none;
+	position: relative;
+	margin-top: 220px;
+}
 
 
 .credit{
@@ -46,13 +57,30 @@ button:active {
 .credit img{
 	position: absolute;
 }
+.bully1{
+	height:200px;
+	margin-top: -535px;
+	position: fixed;
+	z-index: 1;
+	display: none;
+
+}
+
+.bully2{
+	width: 150px;
+	margin-top:-475px;
+	margin-left: 100px;
+	position: fixed;
+	z-index: 2;
+	display: none;
+}
 
 .prex{
 	background-image: url(img/walking-cycle5.png);
 	width: 175px;
 	height: 166px;
 	position: relative;
-	z-index: 1;
+	z-index: 3;
 	transform: translateX(-200px);
 	margin-top: -500px;
 }
@@ -63,7 +91,7 @@ button:active {
 
 .prexFront{
 	background-image: url(img/front.png);
-	z-index: 2;
+	z-index: 4;
 	position: relative;
 	height: 155px;
 	width: 127px;
@@ -75,7 +103,7 @@ button:active {
 
 .prexhelmet{
 	background-image: url(img/front-hat.png);
-	z-index: 3;
+	z-index: 5;
 	position: relative;
 	height: 155px;
 	width: 127px;
@@ -86,7 +114,7 @@ button:active {
 
 .flying{
 	background-image: url(img/flying.png);
-	z-index: 4;
+	z-index:6;
 	position: relative;
 	height: 155px;
 	width: 173px;
@@ -98,14 +126,13 @@ button:active {
 
 .ballons{
 	background-image: url(img/balloons.png);
-	z-index: 5;
+	z-index: 7;
 	position: relative;
 	height: 414px;
 	width: 194px;
 	margin-left: 610px;
-	margin-top: -800px;
 	display: none;
-	animation: falling 1s forwards;
+	animation: falling 4s forwards;
 }
 
 @keyframes walk{
@@ -121,14 +148,17 @@ button:active {
 }
 
 @keyframes flying{
-	100%{
+	25%{
 		transform: translateX(150px);
+	}
+	100%{
+		transform: translateX(150px) translateY(700px);
 	}
 }
 
 @keyframes falling{
 	100%{
-		transform: translateY(380px);
+		transform: translateY(-700px);
 	}
 }
 

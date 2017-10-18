@@ -11,9 +11,18 @@ let ballon = document.querySelector(".ballons");
 let credit = document.querySelector(".credit");
 let introSong = document.querySelector("#intro");
 let heartbeat = document.querySelector("#heartbeat");
+let bullyOne = document.querySelector(".bully1");
+let bullyTwo = document.querySelector(".bully2");
+let jump = document.querySelector("#jump")
+let falling = document.querySelector("#fall");
+let safe = document.querySelector(".safeButton");
 
 introSong.volume = 0.5;
 wind.volume = 0.2;
+
+function visitPage(){
+        window.open('http://www.kmjdesign.dk/webpage/p-rex/prex-storyboard-sequence.pdf');
+    }
 
 startButton.addEventListener('click', function(happening){
     console.log("something is happening");
@@ -31,9 +40,12 @@ startButton.addEventListener('click', function(happening){
     	snow.play();
     	prex.classList.add("prexCSS");
     	snow.addEventListener('ended', animationEnded);
+    	bullyTwo.style.display = "block";
+    	bullyOne.style.display = "block";
     }
 
 }, true);
+
 
 	function animationEnded(){
 		console.log("i am turning now");
@@ -52,7 +64,6 @@ function giveOnHelmet(){
 		console.log("GIVE HIM A HELMET GOT DAMMIT!");
 		prexFront.style.display = "none";
 		helmet.style.display = "block";
-		heartbeat.pause();
 
 	}
 }
@@ -66,10 +77,18 @@ function flyBaby(){
 		console.log("Make baby flyyyyy");
 		helmet.style.display = "none";
 		flying.style.display = "block";
+		heartbeat.pause();
+		jump.play();
+		jump.addEventListener('ended', jumpEnded);
 	}
 }
+function jumpEnded(){
+	console.log("the jump is over,  play falling sound");
+	falling.play();
+	safe.style.display="block";
+}
 
-flying.addEventListener('click', safePrex);
+safe.addEventListener('click', safePrex);
 
 function safePrex(){
 	clickCounter = clickCounter + 1;
@@ -78,6 +97,8 @@ function safePrex(){
 		console.log("Safe that little penguin");
 		flying.style.display = "none";
 		ballon.style.display = "block";
+		safe.style.display="none";
+		falling.pause();
 	}
 }
 
