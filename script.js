@@ -10,8 +10,10 @@ let flying = document.querySelector(".flying");
 let ballon = document.querySelector(".ballons");
 let credit = document.querySelector(".credit");
 let introSong = document.querySelector("#intro");
+let heartbeat = document.querySelector("#heartbeat");
 
 introSong.volume = 0.5;
+wind.volume = 0.2;
 
 startButton.addEventListener('click', function(happening){
     console.log("something is happening");
@@ -37,6 +39,7 @@ startButton.addEventListener('click', function(happening){
 		console.log("i am turning now");
 		prex.style.display = "none";
 		prexFront.style.display = "block";
+		heartbeat.play();
 
 	}
 
@@ -49,6 +52,7 @@ function giveOnHelmet(){
 		console.log("GIVE HIM A HELMET GOT DAMMIT!");
 		prexFront.style.display = "none";
 		helmet.style.display = "block";
+		heartbeat.pause();
 
 	}
 }
