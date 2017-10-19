@@ -21,7 +21,7 @@ button {
 button:hover {background-color: #234854}
 
 button:active {
-  background-color: #234854;
+  background-color: #234854s;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
 }
@@ -157,13 +157,13 @@ h1{
 		transform: translateX(150px);
 	}
 	100%{
-		transform: translateX(150px) translateY(700px);
+		transform: translateX(150px) translateY(1000px);
 	}
 }
 
 @keyframes falling{
 	100%{
-		transform: translateY(-700px);
+		transform: translateY(-1000px);
 	}
 }
 
